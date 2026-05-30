@@ -1,0 +1,7 @@
+
+→ 4 peers · 1024B · fileC.dat
+  [FAIL]  4 peers · 1024B · fileC.dat
+         arquivo=fileC.dat (10.00 MB)  peers=4  bloco=1024B  blocos=10240  tempo=180.8s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: FALHA  tamanho=ERR  hash=ERR

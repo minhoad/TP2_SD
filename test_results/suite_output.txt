@@ -1,0 +1,97 @@
+
+=================================================================
+ SUITE COMPLETA — Tabela 1
+=================================================================
+
+→ TC-01  2 peers · 1 KB · fileA  10 KB
+  [PASS]  TC-01  2 peers · 1 KB · fileA  10 KB
+         arquivo=fileA.dat (0.01 MB)  peers=2  bloco=1024B  blocos=10  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+
+→ TC-02  2 peers · 1 KB · fileB   1 MB
+  [PASS]  TC-02  2 peers · 1 KB · fileB   1 MB
+         arquivo=fileB.dat (1.00 MB)  peers=2  bloco=1024B  blocos=1024  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+
+→ TC-03  2 peers · 1 KB · fileC  10 MB
+  [PASS]  TC-03  2 peers · 1 KB · fileC  10 MB
+         arquivo=fileC.dat (10.00 MB)  peers=2  bloco=1024B  blocos=10240  tempo=23.3s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+
+→ TC-04  4 peers · 1 KB · fileA  10 KB
+  [PASS]  TC-04  4 peers · 1 KB · fileA  10 KB
+         arquivo=fileA.dat (0.01 MB)  peers=4  bloco=1024B  blocos=10  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: OK  tamanho=OK  hash=OK
+
+→ TC-05  4 peers · 1 KB · fileB   1 MB
+  [PASS]  TC-05  4 peers · 1 KB · fileB   1 MB
+         arquivo=fileB.dat (1.00 MB)  peers=4  bloco=1024B  blocos=1024  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: OK  tamanho=OK  hash=OK
+
+→ TC-06  4 peers · 1 KB · fileC  10 MB
+  [FAIL]  TC-06  4 peers · 1 KB · fileC  10 MB
+         arquivo=fileC.dat (10.00 MB)  peers=4  bloco=1024B  blocos=10240  tempo=120.9s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: FALHA  tamanho=ERR  hash=ERR
+
+→ TC-07  4 peers · 4 KB · fileA  10 KB
+  [PASS]  TC-07  4 peers · 4 KB · fileA  10 KB
+         arquivo=fileA.dat (0.01 MB)  peers=4  bloco=4096B  blocos=3  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: OK  tamanho=OK  hash=OK
+
+→ TC-08  4 peers · 4 KB · fileB   1 MB
+  [PASS]  TC-08  4 peers · 4 KB · fileB   1 MB
+         arquivo=fileB.dat (1.00 MB)  peers=4  bloco=4096B  blocos=256  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: OK  tamanho=OK  hash=OK
+
+→ TC-09  4 peers · 4 KB · fileC  10 MB
+  [PASS]  TC-09  4 peers · 4 KB · fileC  10 MB
+         arquivo=fileC.dat (10.00 MB)  peers=4  bloco=4096B  blocos=2560  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+         127.0.0.1:8002: OK  tamanho=OK  hash=OK
+         127.0.0.1:8003: OK  tamanho=OK  hash=OK
+
+→ TC-10  2 peers · 1 KB · fileA  20 KB
+  [PASS]  TC-10  2 peers · 1 KB · fileA  20 KB
+         arquivo=fileA_20kb.dat (0.02 MB)  peers=2  bloco=1024B  blocos=20  tempo=1.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+
+→ TC-11  2 peers · 1 KB · fileB   5 MB
+  [PASS]  TC-11  2 peers · 1 KB · fileB   5 MB
+         arquivo=fileB_5mb.dat (5.00 MB)  peers=2  bloco=1024B  blocos=5120  tempo=5.0s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+
+→ TC-12  2 peers · 1 KB · fileC  20 MB
+  [PASS]  TC-12  2 peers · 1 KB · fileC  20 MB
+         arquivo=fileC_20mb.dat (20.00 MB)  peers=2  bloco=1024B  blocos=20480  tempo=84.9s
+         127.0.0.1:8001: OK  tamanho=OK  hash=OK
+
+
+=================================================================
+ RESUMO
+=================================================================
+  11/12 testes passaram
+
+  Caso de Teste                              Resultado    Tempo  Blocos
+  ------------------------------------------ --------  -------  ------
+  TC-01  2 peers · 1 KB · fileA  10 KB           PASS     1.0s  10
+  TC-02  2 peers · 1 KB · fileB   1 MB           PASS     1.0s  1024
+  TC-03  2 peers · 1 KB · fileC  10 MB           PASS    23.3s  10240
+  TC-04  4 peers · 1 KB · fileA  10 KB           PASS     1.0s  10
+  TC-05  4 peers · 1 KB · fileB   1 MB           PASS     1.0s  1024
+  TC-06  4 peers · 1 KB · fileC  10 MB           FAIL   120.9s  10240
+  TC-07  4 peers · 4 KB · fileA  10 KB           PASS     1.0s  3
+  TC-08  4 peers · 4 KB · fileB   1 MB           PASS     1.0s  256
+  TC-09  4 peers · 4 KB · fileC  10 MB           PASS     1.0s  2560
+  TC-10  2 peers · 1 KB · fileA  20 KB           PASS     1.0s  20
+  TC-11  2 peers · 1 KB · fileB   5 MB           PASS     5.0s  5120
+  TC-12  2 peers · 1 KB · fileC  20 MB           PASS    84.9s  20480

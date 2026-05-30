@@ -1,13 +1,3 @@
-"""
-test_runner.py — Executor de testes para o sistema P2P TP2_SD
-
-Uso:
-    # Um caso específico
-    python3 tests/test_runner.py --file fileA.dat --peers 2 --piece-size 1024
-
-    # Suite completa definida na Tabela 1 do enunciado
-    python3 tests/test_runner.py --run-all
-"""
 import subprocess
 import time
 import sys
@@ -70,10 +60,6 @@ TEST_SUITE = [
 ]
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
 def _sha256(path: str) -> str:
     h = hashlib.sha256()
     with open(path, 'rb') as f:
@@ -112,10 +98,6 @@ def _ensure_file(file_name: str) -> None:
         f.write(os.urandom(size))
     print(f"  Gerado {file_name}  ({size:,} bytes)")
 
-
-# ---------------------------------------------------------------------------
-# Core
-# ---------------------------------------------------------------------------
 
 def run_test(file_name: str,
              piece_size: int = 1024,
@@ -220,11 +202,6 @@ def run_test(file_name: str,
                 proc.wait()
         for fh in log_files:
             fh.close()
-
-
-# ---------------------------------------------------------------------------
-# CLI
-# ---------------------------------------------------------------------------
 
 def _print_result(label, file_name, num_peers, piece_size, result):
     status = "PASS" if result["ok"] else "FAIL"
