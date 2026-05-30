@@ -1,0 +1,15 @@
+2026-05-29 21:26:43,779 INFO Servidor ouvindo em 127.0.0.1:8002
+2026-05-29 21:26:43,780 INFO Conectado a 127.0.0.1:8000
+2026-05-29 21:26:43,780 INFO Metadados recebidos: fileA.dat (10 blocos)
+2026-05-29 21:26:43,881 INFO Bloco 0 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,881 INFO Bloco 1 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,881 INFO Bloco 2 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,881 INFO Bloco 3 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,881 INFO Bloco 4 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,881 INFO Bloco 5 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,881 INFO Bloco 6 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,882 INFO Bloco 7 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,882 INFO Bloco 8 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,882 INFO Bloco 9 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,882 INFO Download completo!
+2026-05-29 21:26:43,883 INFO Arquivo salvo em downloads/127.0.0.1:8002/fileA.dat

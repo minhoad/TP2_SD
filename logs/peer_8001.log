@@ -1,0 +1,17 @@
+2026-05-29 21:26:42,979 INFO Servidor ouvindo em 127.0.0.1:8001
+2026-05-29 21:26:42,979 INFO Conectado a 127.0.0.1:8000
+2026-05-29 21:26:42,979 ERROR Falha ao conectar a 127.0.0.1:8003: [Errno 111] Connect call failed ('127.0.0.1', 8003)
+2026-05-29 21:26:42,980 INFO Metadados recebidos: fileA.dat (10 blocos)
+2026-05-29 21:26:43,080 INFO Bloco 0 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 1 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 2 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 3 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 4 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 5 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 6 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 7 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 8 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,081 INFO Bloco 9 recebido de 127.0.0.1:8000
+2026-05-29 21:26:43,082 INFO Download completo!
+2026-05-29 21:26:43,083 INFO Arquivo salvo em downloads/127.0.0.1:8001/fileA.dat
+2026-05-29 21:26:44,585 INFO Metadados enviados para 127.0.0.1:8003

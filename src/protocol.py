@@ -1,12 +1,13 @@
 import struct
 
-MSG_HANDSHAKE = 0x01
-MSG_BITFIELD  = 0x02
-MSG_INTERESTED = 0x03
+MSG_HANDSHAKE      = 0x01
+MSG_BITFIELD       = 0x02
+MSG_INTERESTED     = 0x03
 MSG_NOT_INTERESTED = 0x04
-MSG_REQUEST   = 0x05
-MSG_PIECE     = 0x06
-MSG_HAVE      = 0x07
+MSG_REQUEST        = 0x05
+MSG_PIECE          = 0x06
+MSG_HAVE           = 0x07
+MSG_METADATA       = 0x08
 
 def pack_message(msg_type, payload=b''):
     """Empacota mensagem: tamanho (4 bytes) + tipo (1 byte) + payload."""

@@ -1,0 +1,6 @@
+2026-05-29 21:26:42,177 INFO Seeder inicial: fileA.dat (10 blocos)
+2026-05-29 21:26:42,177 INFO Servidor ouvindo em 127.0.0.1:8000
+2026-05-29 21:26:42,177 ERROR Falha ao conectar a 127.0.0.1:8001: [Errno 111] Connect call failed ('127.0.0.1', 8001)
+2026-05-29 21:26:42,178 ERROR Falha ao conectar a 127.0.0.1:8002: [Errno 111] Connect call failed ('127.0.0.1', 8002)
+2026-05-29 21:26:42,979 INFO Metadados enviados para 127.0.0.1:8001
+2026-05-29 21:26:43,780 INFO Metadados enviados para 127.0.0.1:8002

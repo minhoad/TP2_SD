@@ -28,9 +28,19 @@ class Peer:
         self.server = None
 
     async def broadcast_have(self, index):
-        """Anuncia a todos os vizinhos que agora possui um bloco."""
+        """Anuncia a todos os vizinhos que agora possui um bloco.
+
+        Apenas envia para conexões onde o handshake já foi concluído
+        (remote_bitfield definido). Erros de escrita são ignorados
+        individualmente para não propagar exceções para o chamador.
+        """
         for conn in self.connections.values():
-            await conn.send_have(index)
+            if conn.remote_bitfield is None:
+                continue  # handshake ainda não completou
+            try:
+                await conn.send_have(index)
+            except Exception:
+                pass  # conexão já pode estar encerrada
 
     async def start(self):
         # Inicia servidor
@@ -46,16 +56,9 @@ class Peer:
 
     async def _handle_new_connection(self, reader, writer):
         conn = PeerConnection(self, reader, writer, is_outgoing=False)
-        # Guarda a conexão
         peer_addr = f"{writer.get_extra_info('peername')[0]}:{writer.get_extra_info('peername')[1]}"
         self.connections[peer_addr] = conn
         asyncio.create_task(conn.handle_connection())
-        # Se o peer for leecher e ainda não tiver metadados, tenta obtê-los dessa conexão
-        if not self.file_manager.info_hash:
-            # Aguarda o handshake da outra ponta para pegar o info_hash
-            # Isto já está dentro de conn.handle_connection()
-            pass
-        # Inicia o loop de requisição de peças se for conexão de saída ou após handshake
         asyncio.create_task(conn.request_pieces())
 
     async def connect_to_neighbors(self):
